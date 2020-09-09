@@ -1,0 +1,6 @@
+.ajax-load-index{
+	background-image: url(/local/ajax/i/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}

@@ -1,0 +1,764 @@
+{%extends 'base.html'%}
+{%block content%}
+<main class="mainPage" id="content">
+
+	    <div class="container legacy-wrapper">
+	        <div class="row">
+	            <div class="col-xs-12">
+
+
+	                <div class="bx-breadcrumb" itemprop="http://schema.org/breadcrumb" itemscope=""
+	                    itemtype="http://schema.org/BreadcrumbList">
+	                    <div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope=""
+	                        itemtype="http://schema.org/ListItem">
+
+	                        <a href="https://alcomarket.ru/" title="Купить алкоголь" itemprop="item">
+	                            <span itemprop="name">Купить алкоголь</span>
+	                        </a>
+	                        <meta itemprop="position" content="1">
+	                    </div>
+	                    {%for slug, name in breadcrumbs%}
+
+	                    <div class="bx-breadcrumb-item" id="bx_breadcrumb_{{forloop.counter}}" itemprop="itemListElement" itemscope=""
+	                        itemtype="http://schema.org/ListItem">
+	                        <i>→</i>
+	                        <a href="/catalog/category/{{slug}}" title="Вино" itemprop="item">
+	                            <span itemprop="name">{{name}}</span>
+	                        </a>
+	                        <meta itemprop="position" content="{{forloop.counter}}">
+	                    </div>
+	                    {%endfor%}
+	                </div>
+
+	                <div itemscope="" itemtype="http://schema.org/Product">
+	                    <meta itemprop="name" content="Белое сухое вино Вино Felix Solis Mucho Mas Мучо Мас">
+	                    <meta itemprop="brand" content="">
+	                    <meta itemprop="description" content="Белое сухое вино Вино Felix Solis Mucho Mas Мучо Мас">
+
+	                    <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+	                        <meta itemprop="price" content="650">
+	                        <meta itemprop="priceCurrency" content="RUB">
+	                        <a style="display:none" itemprop="url"
+	                            href="https://alcomarket.ru/catalog/wine/beloe/vino-felix-solis-mucho-mas-mucho-mas/"></a>
+	                        <link itemprop="availability" href="https://schema.org/InStock">
+	                    </span>
+	                    <div id="item">
+	                        <div class="row">
+	                            <div class="col-xs-12 col-sm-5 col-md-5">
+
+	                                <div class="left relative">
+	                                    <div class="item_icons">
+
+	                                        <div id="bxdynamic_qepX1R_start" style="display:none"></div>
+	                                        <div id="bxdynamic_qepX1R_end" style="display:none"></div>
+	                                    </div>
+	                                    <h1 class="visible-xs">{{product.name}}</h1>
+
+	                                    <div id="bxdynamic_QfHh6Q_start" style="display:none"></div>
+	                                    <div class="catalog_item_bookmark visible-xs"></div>
+	                                    <div id="bxdynamic_QfHh6Q_end" style="display:none"></div>
+	                                    <div class="item_art visible-xs text-center">Артикул: {{product.article}}</div>
+
+	                                    <div class="visible-xs">
+	                                        <div class="mp-widget" data-mp-productskus="147771"
+	                                            data-mp-widget-type="SmallProductRating" data-mp-show-stars="true"
+	                                            data-mp-show-rating-value="true" data-mp-show-reviews-count="true"
+	                                            data-mp-show-service-logo="false" data-mp-dynamic-id="1">
+	                                            <div class="mp-small-rating-widget-wrapper">
+	                                                <div class="mp-small-rating-widget-review-rating">
+	                                                    <div class="mp-small-rating-widget-rating-stars">
+	                                                        <div style="width:0%"></div>
+	                                                    </div>
+	                                                </div>
+	                                                <div class="mp-small-rating-widget-rating-value">0</div>
+	                                                <div class="mp-small-rating-widget-reviews-count"><span>Отзывы:
+	                                                    </span>0</div>
+	                                                <div class="mp-clear"></div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+
+	                                    <!--
+				<div class="stars_rating" onclick="scrollToEl($('#reviews'))">
+					<div class="stars_block">
+						<div class="stars">
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+													</div>
+					</div>
+
+					<div class="stars_text">Отзывов нет</div>
+				</div>
+				-->
+
+	                                    <div class="img">
+	                                        <div class="img_block" itemprop="image">
+	                                            <img itemprop="image" class="lazyload loaded"
+	                                                src="{{product.image.url}}"
+	                                                data-image="{{product.image.url}}"
+	                                                alt="{{product.name}}"
+	                                                title="{{product.name}}" width="" height=""
+	                                                data-ll-status="loaded">
+	                                        </div>
+	                                    </div>
+	                                </div>
+
+	                            </div>
+	                            <div class="col-xs-12 col-sm-7 col-md-7">
+
+	                                <div class="right relative">
+
+	                                    <div id="bxdynamic_ipT8SJ_start" style="display:none"></div>
+	                                    <div class="catalog_item_bookmark hidden-xs"></div>
+	                                    <div id="bxdynamic_ipT8SJ_end" style="display:none"></div>
+	                                    <div class="h1 hidden-xs">{{product.name}}
+	                                    </div>
+
+	                                    <div class="hidden-xs">
+	                                        <div class="mp-widget" data-mp-productskus="147771"
+	                                            data-mp-widget-type="SmallProductRating" data-mp-show-stars="true"
+	                                            data-mp-show-rating-value="true" data-mp-show-reviews-count="true"
+	                                            data-mp-show-service-logo="false" data-mp-dynamic-id="2">
+	                                            <div class="mp-small-rating-widget-wrapper">
+	                                                <div class="mp-small-rating-widget-review-rating">
+	                                                    <div class="mp-small-rating-widget-rating-stars">
+	                                                        <div style="width:0%"></div>
+	                                                    </div>
+	                                                </div>
+	                                                <div class="mp-small-rating-widget-rating-value">0</div>
+	                                                <div class="mp-small-rating-widget-reviews-count"><span>Отзывы:
+	                                                    </span>0</div>
+	                                                <div class="mp-clear"></div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <br>
+
+	                                    <!--old отзывы
+				<div class="stars_rating hidden-xs" onclick="scrollToEl($('#reviews'))">
+					<div class="stars_block">
+						<div class="stars">
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+														<div class="star star_e"></div>
+													</div>
+					</div>
+
+					<div class="stars_text">Отзывов нет</div>
+									</div>
+				-->
+
+	                                    <div class="info_list hidden-xs">
+	                                        <div class="info_list_item">
+	                                            <div>Артикул</div>
+	                                            <div>{{product.article}}</div>
+	                                        </div>
+
+
+	                                        <div class="info_list_item">
+	                                            <div>Страна</div>
+	                                            <div class="flag">
+	                                                <div class="hidden-xs">
+	                                                	<img src="{{product.country.image.url}}"
+	                                                        title="Испания"> {{product.country.name}}</div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="info_list_item hidden-xs">
+	                                            <div>Крепость</div>
+	                                            <div>{{product.percent}} %</div>
+	                                        </div>
+	                                    </div>
+
+
+
+
+
+	                                    <div class="price_float text-xs-center m-c-sm table-xs-block">
+	                                        <div id="bxdynamic_uLSPYO_start" style="display:none"></div>
+	                                        <div id="bxdynamic_uLSPYO_end" style="display:none"></div>
+	                                    </div>
+
+
+
+	                                    <div id="bxdynamic_CGN681_start" style="display:none"></div>
+	                                    <div class="catalog_item_addcart add_cart" data-id="147771">
+	                                        <div class="catalog_item_buy">В корзину</div>
+	                                        <div class="catalog_item_count_block active" data-id="147771">
+	                                            <span class="minus"></span>
+	                                            <span class="count" data-similar-url="#similar-items-block"
+	                                                data-max_count="10"></span>
+	                                            <span class="plus"></span>
+	                                        </div>
+	                                    </div>
+	                                    <div id="bxdynamic_CGN681_end" style="display:none"></div>
+	                                    <div class="one-click catalog_item_buy catalog_item_not_available"
+	                                        onclick="buyoneclick(&quot;147771&quot;, &quot;Вино Felix Solis Mucho Mas Мучо Мас&quot;, &quot;/upload/resize_cache/iblock/cd7/460_550_1/mucho_mas_white.png&quot;,&quot;650&quot;,&quot;&quot;,&quot;10&quot;,&quot;#similar-items-block&quot;); ym(53096326, &quot;reachGoal&quot;, &quot;BTN_ONECLICK&quot;);">
+	                                        купить в 1 клик</div>
+
+	                                    <div class="price_float price_float_mob visible-xs">
+	                                        <div class="price_block">
+	                                            <div class="price">
+	                                                <span>{{product.price}}</span> р
+	                                            </div>
+	                                        </div>
+
+	                                        <div class="add_cart " data-id="147771"><span class="minus"></span><span
+	                                                class="count"></span></div>
+	                                    </div>
+
+
+	                                </div>
+
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div id="item_info">
+	                        <div class="row">
+	                            <div class="col-xs-12 col-sm-3 col-md-2">
+	                                <div class="info_title">Подробная информация</div>
+	                            </div>
+	                            <div class="col-xs-12 col-sm-9 col-md-10">
+	                                <div class="info_text info_table">
+	                                    <div class="item_info_block row">
+
+	                                        <div class="col-xs-6 col-sm-3">
+	                                            <div class="info_title_s">Страна</div>
+	                                            <div class="flag"><img
+	                                                    src="{{product.country.image.url}}"
+	                                                    title="Испания"> {{product.country.name}}</div>
+	                                        </div>
+
+	                                        {%for key, value in product.extra.items%}
+
+	                                        <div class="col-xs-6 col-sm-3">
+	                                            <div class="info_title_s">{{key}}</div>
+	                                            {{value}}
+	                                        </div>
+	                                        {%endfor%}
+
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="item_info_block row">
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="info_title">Описание</div>
+                                </div>
+                                <div class="col-xs-12 col-sm-9 col-md-10">
+                                    <div class="info_text">{{product.dsc}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item_info_block row">
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="info_title"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-9 col-md-10">
+                                    <div class="info_text">
+
+                                        <div class="tabbable">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a
+                                                        href="https://alcomarket.ru/catalog/krepkiy-alkogol/viski/jameson-0-7-l/#tab1"
+                                                        data-toggle="tab" class="text-danger">Купажирование — что
+                                                        это</a></li>
+                                                <li><a href="https://alcomarket.ru/catalog/krepkiy-alkogol/viski/jameson-0-7-l/#tab2"
+                                                        data-toggle="tab" class="text-danger active">Как пить
+                                                        купажированный виски</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane" id="tab1">
+                                                    {{product.viscky.cupaj}}
+                                                </div>
+                                                <div class="tab-pane active" id="tab2">
+                                                    {{product.viscky.how_drink}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="item_info_block row">
+                                <div class="col-xs-12 col-sm-3 col-md-2">
+                                    <div class="info_title">Цвет</div>
+                                </div>
+                                <div class="col-xs-12 col-sm-9 col-md-10">
+                                    <div class="info_text">{{product.color}}</div>
+                                </div>
+                            </div>
+	                    </div>
+
+
+	                    <div id="reviews" class="m-b-60">
+	                        <div class="title">Отзывы</div>
+
+
+
+	                        <div class="mp-productName" style="display: none;">Вино Felix Solis Mucho Mas Мучо Мас</div>
+	                        <div class="mp-widget" data-mp-productskus="147771" data-mp-widget-type="Product"
+	                            data-mp-show-service-logo="false" data-mp-dynamic-id="3" style="">
+
+	                            <div class="mp-widget-wrapper">
+	                                <div class="mp-spacer"></div>
+
+
+
+	                                <div class="mp-product-widget-content">
+	                                    <div class="mp-clear"></div>
+
+
+
+	                                    <div class="mp-float_r mp-logo"><a target="_blank" href="https://mneniya.pro/"><img
+	                                                alt="Mneniya.Pro"
+	                                                src="./Купить сухое вино Вино Felix Solis Mucho Mas Мучо Мас - цена на вино на онлайн-витрине alcomarket.ru_files/mneniya-new-logo.png"></a>
+	                                    </div>
+
+
+	                                    <div class="mp-clear"></div>
+
+
+	                                    <div class="mp-product-widget-head">
+	                                        <div class="mp-header-wrapper">
+
+	                                            <div class="mp-no-reviews">
+	                                                <div class="mp-head-block mp-head-first-block mp-float_l mp-no-reviews-text"
+	                                                    style="">Пока нет отзывов.</div>
+	                                                <div class="mp-head-block mp-head-second-block mp-float_l"
+	                                                    style="margin-right: 0px;">
+	                                                    <div class="mp-open-modal" formtype="ProductReview"
+	                                                        productskus="147771"
+	                                                        productname="%D0%92%D0%B8%D0%BD%D0%BE%20Felix%20Solis%20Mucho%20Mas%20%D0%9C%D1%83%D1%87%D0%BE%20%D0%9C%D0%B0%D1%81">
+	                                                        Добавить Отзыв</div>
+	                                                </div>
+	                                            </div>
+
+
+	                                            <div class="mp-clear"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mp-separator"></div>
+
+	                                    <div class="mp-reviews">
+
+	                                    </div>
+	                                    <div class="mp-pagination"></div>
+
+	                                </div>
+	                            </div>
+
+	                        </div>
+
+
+
+	                    </div>
+
+	                </div>
+
+
+
+
+	                <style>
+	                    #seo_link_footer {
+	                        padding-bottom: 50px;
+	                    }
+
+	                    @media (max-width: 767.97px) {
+	                        #seo_link_footer {
+	                            display: block;
+	                        }
+
+	                        #seo_link_footer .heading-sm {
+	                            padding-left: 15px;
+	                        }
+
+	                        #seo_link_footer_items {
+	                            display: -webkit-box;
+	                            display: -webkit-flex;
+	                            display: -ms-flexbox;
+	                            display: flex;
+	                            overflow-x: scroll;
+	                            overflow-y: hidden;
+	                        }
+	                    }
+
+	                    .seo_link_footer_item {
+	                        font-size: 15px;
+	                        padding: 3px 0;
+	                        margin-right: 10px;
+	                        display: inline-block;
+	                        color: #555;
+	                        text-decoration: none;
+	                    }
+
+	                    .seo_link_footer_item:hover {
+	                        color: #89001E;
+	                        text-decoration: none;
+	                    }
+	                </style>
+
+
+	                <div id="seo_link_footer">
+	                    <div class="m-b-30">
+	                        <h2 class="heading-sm">Популярные запросы</h2>
+	                    </div>
+
+	                    <div id="seo_link_footer_items">
+	                        <a href="https://alcomarket.ru/catalog/wine/rozovoe/filter/country-avstriya/sugar-polusukhoe/"
+	                            class="seo_link_footer_item">Австрийские полусухие розовые вина</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/krasnoe/filter/country-bolgariya/sugar-polusukhoe/volume-0_75_l/"
+	                            class="seo_link_footer_item">Болгарские полусухие красные вина 0.75 л</a> <br
+	                            class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/bezalkogolnoe/filter/country-germaniya/"
+	                            class="seo_link_footer_item">Немецкие безалкогольные вина</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/beloe/filter/country-tunis/sugar-sukhoe/volume-0_75_l/"
+	                            class="seo_link_footer_item">Тунисские сухие белые вина 0.75 л</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/beloe/filter/country-izrail/"
+	                            class="seo_link_footer_item">Израильские белые вина</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/krasnoe/filter/country-novaya_zelandiya/volume-0_75_l/"
+	                            class="seo_link_footer_item">Новозеландские красные вина 0.75 л</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/kheres/filter/sugar-sladkoe/volume-0_5_l/"
+	                            class="seo_link_footer_item">Сладкий херес 0.5 л</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/beloe/filter/country-sloveniya/volume-0_75_l/"
+	                            class="seo_link_footer_item">Словенские белые вина 0.75 л</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/beloe/filter/country-chili/sugar-sukhoe/volume-0_187_l/"
+	                            class="seo_link_footer_item">Чилийские сухие белые вина 0.187 л</a> <br class="visible-xs">
+	                        <a href="https://alcomarket.ru/catalog/wine/vermut/filter/country-italiya/"
+	                            class="seo_link_footer_item">Итальянский вермут</a> <br class="visible-xs">
+
+	                    </div>
+	                </div>
+	                <div id="bxdynamic_1EgAeq_start" style="display:none"></div>
+	                <div id="bxdynamic_1EgAeq_end" style="display:none"></div>
+
+
+	            </div>
+	        </div>
+	    </div>
+	    <div id="bxdynamic_subscribe-footer_start" style="display:none"></div>
+	    <div id="bxdynamic_subscribe-footer_end" style="display:none"></div>
+	    <div class="bottom-nav">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-12 col-nav-bottom">
+	                    <div class="nav-bottom">
+	                        <button class="btn btn-link nav-bottom__item btn-menu-a from-bottom"
+	                            data-target="#mobileCatalog">
+	                            <div class="nav-bottom__item-icon">
+	                                <img data-src="/local/templates/new_template/image/layout/bottom/сatelog.svg" alt=""
+	                                    class="img-fluid">
+	                            </div>
+	                            <div class="nav-bottom__item-text">
+	                                Каталог
+	                            </div>
+	                        </button>
+	                        <button
+	                            class="btn btn-link nav-bottom__item btn-menu-a from-bottom de_search_line_input digi-instant-search jc-ignore"
+	                            id="title-search-input" autocomplete="off">
+	                            <div class="nav-bottom__item-icon">
+	                                <img src="./Купить сухое вино Вино Felix Solis Mucho Mas Мучо Мас - цена на вино на онлайн-витрине alcomarket.ru_files/search.svg"
+	                                    alt="" class="img-fluid">
+	                            </div>
+	                            <div class="nav-bottom__item-text">
+	                                Поиск
+	                            </div>
+	                        </button>
+	                        <a href="tel:+74951863539" class="btn btn-link nav-bottom__item from-bottom">
+	                            <div class="nav-bottom__item-icon">
+	                                <img data-src="/local/templates/new_template/image/layout/bottom/phone.svg" alt=""
+	                                    class="img-fluid">
+	                            </div>
+	                            <div class="nav-bottom__item-text">
+	                                Связаться
+	                            </div>
+	                        </a>
+	                        <a href="https://alcomarket.ru/catalog/wine/beloe/vino-felix-solis-mucho-mas-mucho-mas/#"
+	                            class="btn btn-link nav-bottom__item from-bottom" id="mobile-rcrm-chat">
+	                            <div class="nav-bottom__item-icon">
+	                                <img data-src="/local/templates/new_template/image/layout/bottom/consult.svg" alt=""
+	                                    class="img-fluid">
+	                            </div>
+	                            <div class="nav-bottom__item-text">
+	                                Консультант
+	                            </div>
+	                        </a>
+	                        <div id="bxdynamic_5623zQ_start" style="display:none"></div> <a
+	                            href="https://alcomarket.ru/catalog/wine/beloe/vino-felix-solis-mucho-mas-mucho-mas/#signIn"
+	                            class="btn btn-link nav-bottom__item from-bottom" data-toggle="modal"
+	                            data-target="#signIn">
+	                            <div class="nav-bottom__item-icon">
+	                                <img src="./Купить сухое вино Вино Felix Solis Mucho Mas Мучо Мас - цена на вино на онлайн-витрине alcomarket.ru_files/lk.svg"
+	                                    alt="" class="img-fluid">
+	                            </div>
+	                            <div class="nav-bottom__item-text">Войти</div>
+	                        </a>
+	                        <div id="bxdynamic_5623zQ_end" style="display:none"></div>
+	                        <!-- Код после авторизации. Заменяет кнопку "Войти" -->
+	                        <!-- <a href="#" class="btn btn-link nav-bottom__item from-bottom">
+								<div class="nav-bottom__item-icon">
+									<img data-src="/local/templates/new_template/image/layout/bottom/fav.svg" alt="" class="img-fluid">
+								</div>
+								<div class="nav-bottom__item-text">
+									Мой погреб
+								</div>
+							</a> -->
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	    <article class="menu" id="menu">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-12 col-menu-head">
+	                    <button class="btn btn-close" id="closeMenu">
+	                        <img data-src="/local/templates/new_template/image/layout/close.svg" alt="" class="img-fluid">
+	                    </button>
+	                </div>
+	                <div class="col-12 col-menu-inner">
+
+	                    <section class="menu-catalog" id="mobileMenu">
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/lk/" class="btn btn-collapse collapsed">
+	                                <span class="icon lk-i"></span> Личный кабинет
+	                            </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/catalog/wine/beloe/vino-felix-solis-mucho-mas-mucho-mas/#"
+	                                class="btn btn-collapse collapsed btn-link nav-bottom__item1 btn-menu-a from-bottom"
+	                                data-target="#mobileCatalog">
+	                                <span class="icon catalog-i"></span> Каталог
+	                            </a>
+	                        </div>
+
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/compare/" class="btn btn-collapse collapsed">
+	                                <span class="icon compare-i"></span> Сравнение товаров
+	                            </a>
+	                        </div>
+
+	                        <div class="menu-catalog__item collapse-container">
+	                            <button class="btn btn-collapse collapsed" data-target="#mobileForBuyers"
+	                                data-toggle="collapse">
+	                                <span class="icon gift-i"></span> Покупателям
+	                            </button>
+	                            <div id="bxdynamic_g8taYv_start" style="display:none"></div>
+	                            <div class="collapse" id="mobileForBuyers">
+	                                <div class="menu-mob">
+	                                    <a href="https://alcomarket.ru/about/" class="menu-mob__item">
+	                                        О нас </a>
+	                                    <a href="https://alcomarket.ru/faq/" class="menu-mob__item">
+	                                        Вопрос / ответ </a>
+	                                    <a href="https://alcomarket.ru/rules/" class="menu-mob__item">
+	                                        Правила и условия </a>
+	                                    <a href="https://alcomarket.ru/discount/" class="menu-mob__item">
+	                                        Программа лояльности </a>
+	                                    <a href="https://alcomarket.ru/otzyvy-klientov/" class="menu-mob__item">
+	                                        Отзывы клиентов </a>
+	                                    <a href="https://alcomarket.ru/contacts/" class="menu-mob__item">
+	                                        Контакты </a>
+	                                </div>
+	                            </div>
+	                            <div id="bxdynamic_g8taYv_end" style="display:none"></div>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <button class="btn btn-collapse collapsed" data-target="#mobileShop"
+	                                data-toggle="collapse">
+	                                <span class="icon pin-i"></span> Адреса магазинов
+	                            </button>
+	                            <div class="collapse" id="mobileShop">
+	                                <div class="menu-mob">
+	                                    <a href="https://alcomarket.ru/contacts/avtozavodskaya/" class="menu-mob__item">
+	                                        <div class="shop-link__head">Автозаводская</div>
+	                                    </a>
+	                                    <a href="https://alcomarket.ru/contacts/malaya-gruzinskaya/"
+	                                        class="menu-mob__item">
+	                                        <div class="shop-link__head">Малая Грузинская</div>
+	                                    </a>
+	                                    <a href="https://alcomarket.ru/contacts/solntsevskiy-prospekt/"
+	                                        class="menu-mob__item">
+	                                        <div class="shop-link__head">Солнцевский проспект</div>
+	                                    </a>
+	                                    <a href="https://alcomarket.ru/contacts/bakuninskaya/" class="menu-mob__item">
+	                                        <div class="shop-link__head">Бакунинская</div>
+	                                    </a>
+	                                    <a href="https://alcomarket.ru/contacts/buninskaya-alleya/" class="menu-mob__item">
+	                                        <div class="shop-link__head">Бунинская аллея</div>
+	                                    </a>
+	                                    <a href="https://alcomarket.ru/contacts/kievskaya/" class="menu-mob__item">
+	                                        <div class="shop-link__head">Киевская</div>
+	                                    </a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/corporate/" class="btn btn-collapse collapsed">
+	                                <span class="icon partner-i"></span> Корпоративным клиентам
+	                            </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/blog/" class="btn btn-collapse collapsed">
+	                                <span class="icon blog-i"></span> Наш блог
+	                            </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/friend/" class="btn btn-collapse collapsed">
+	                                <span class="icon bonus-i"></span> Бонус за друзей
+	                            </a>
+	                        </div>
+	                    </section>
+
+	                    <div id="bxdynamic_rIpOz9_start" style="display:none"></div>
+	                    <section class="menu-catalog" id="mobileCatalog">
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/favourites/"
+	                                class="btn btn-collapse btn-collapse--noicon collapsed">
+	                                Мой погреб
+	                            </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container collapse-container--search">
+	                            <button id="title-search-input"
+	                                class="btn btn-collapse btn-collapse--search btn-menu-a collapsed digi-instant-search jc-ignore"
+	                                autocomplete="off">
+	                                Поиск по каталогу
+	                            </button>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <button class="btn btn-collapse btn-collapse--noicon collapsed" data-target="#mobile0"
+	                                data-toggle="collapse">
+	                                Вино </button>
+	                            <div class="collapse" id="mobile0">
+	                                <div class="menu-mob menu-mob--catalog">
+	                                    <a href="https://alcomarket.ru/catalog/wine/krasnoe/" class="menu-mob__item">
+	                                        Красное </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/beloe/" class="menu-mob__item">
+	                                        Белое </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/rozovoe/" class="menu-mob__item">
+	                                        Розовое </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/kreplenoe/" class="menu-mob__item">
+	                                        Крепленое </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/bezalkogolnoe/" class="menu-mob__item">
+	                                        Безалкогольное </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/vermut/" class="menu-mob__item">
+	                                        Вермут </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/vinnyy-napitok/"
+	                                        class="menu-mob__item">
+	                                        Винный напиток </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/goluboe/" class="menu-mob__item">
+	                                        Голубое </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/desertnoe/" class="menu-mob__item">
+	                                        Десертное </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/koshernoe/" class="menu-mob__item">
+	                                        Кошерное </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/likernoe/" class="menu-mob__item">
+	                                        Ликерное </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/oranzhevoe/" class="menu-mob__item">
+	                                        Оранжевое </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/plodovoe/" class="menu-mob__item">
+	                                        Плодовое </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/portveyn/" class="menu-mob__item">
+	                                        Портвейн </a>
+	                                    <a href="https://alcomarket.ru/catalog/wine/kheres/" class="menu-mob__item">
+	                                        Херес </a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/catalog/shampanskoe-i-igristoe/"
+	                                class="btn btn-collapse btn-collapse--noicon collapsed no-arrow">
+	                                Шампанское и игристое </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <button class="btn btn-collapse btn-collapse--noicon collapsed" data-target="#mobile17"
+	                                data-toggle="collapse">
+	                                Крепкий алкоголь </button>
+	                            <div class="collapse" id="mobile17">
+	                                <div class="menu-mob menu-mob--catalog">
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/rom/"
+	                                        class="menu-mob__item">
+	                                        Ром </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/viski/"
+	                                        class="menu-mob__item">
+	                                        Виски </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/cognac/"
+	                                        class="menu-mob__item">
+	                                        Коньяк </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/likery/"
+	                                        class="menu-mob__item">
+	                                        Ликеры и настойки </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/vodka/"
+	                                        class="menu-mob__item">
+	                                        Водка </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/gin/"
+	                                        class="menu-mob__item">
+	                                        Джин </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/absent/"
+	                                        class="menu-mob__item">
+	                                        Абсент </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/aperitive/"
+	                                        class="menu-mob__item">
+	                                        Аперитивы </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/armanyak/"
+	                                        class="menu-mob__item">
+	                                        Арманьяк </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/brendi/"
+	                                        class="menu-mob__item">
+	                                        Бренди </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/grappa/"
+	                                        class="menu-mob__item">
+	                                        Граппа </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/kalvados/"
+	                                        class="menu-mob__item">
+	                                        Кальвадос </a>
+	                                    <a href="https://alcomarket.ru/catalog/krepkiy-alkogol/tequila/"
+	                                        class="menu-mob__item">
+	                                        Текила </a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/catalog/sety/"
+	                                class="btn btn-collapse btn-collapse--noicon collapsed no-arrow">
+	                                Алкогольные наборы </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/catalog/upakovka/"
+	                                class="btn btn-collapse btn-collapse--noicon collapsed no-arrow">
+	                                В подарочной упаковке </a>
+	                        </div>
+	                        <div class="menu-catalog__item collapse-container">
+	                            <a href="https://alcomarket.ru/catalog/water/"
+	                                class="btn btn-collapse btn-collapse--noicon collapsed no-arrow">
+	                                Безалкогольные напитки </a>
+	                        </div>
+
+	                    </section>
+	                    <div id="bxdynamic_rIpOz9_end" style="display:none"></div>
+	                </div>
+	            </div>
+	        </div>
+	    </article>
+
+	    <div class="fixed-navigation">
+	        <a href="https://alcomarket.ru/catalog/wine/beloe/vino-felix-solis-mucho-mas-mucho-mas/#"
+	            class="btn btn-outline-primary btn-to-the-top" style="opacity: 0;">
+	            <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                <path
+	                    d="M4.35355 0.646446C4.15829 0.451185 3.84171 0.451185 3.64645 0.646446L0.464467 3.82843C0.269204 4.02369 0.269204 4.34027 0.464467 4.53553C0.659729 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 17L4.5 1L3.5 1L3.5 17L4.5 17Z"
+	                    fill="#89001E"></path>
+	            </svg>
+	        </a>
+	    </div>
+	</main>
+{%endblock%}

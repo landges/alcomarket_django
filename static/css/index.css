@@ -1,0 +1,21 @@
+.modal__block .reg_checkbox{
+        display: flex;
+}
+.modal__block .reg_checkbox label.active{
+    display: flex;
+}
+.modal__block .reg_checkbox label.active span{
+    color: #89001E;
+}
+.modal__block .reg_checkbox label.active a{
+    color: #a0a0a0;
+}
+.modal__block .reg_checkbox label.active a:hover{
+    color: #333333;
+}
+.modal__block .reg_checkbox label.active div {
+    background: #89001E url('/local/html/img/svg/check_a.svg') no-repeat scroll center center / contain;
+    border: 1px solid #89001E;
+    width: 20px;
+    height: 15px;
+}
